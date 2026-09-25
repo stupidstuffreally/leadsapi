@@ -22,44 +22,34 @@ gecommit en gepusht wordt.
   individuele recruiter-scherm.
 - **SyncLog** — timestamp van de laatste handmatige sync.
 
+## Database
+
+De data staat in een gehoste Postgres-database ("Prisma Postgres", aangemaakt
+via Vercel's Storage-tab en gekoppeld aan dit project). Er is dus geen
+lokaal databasebestand meer dat gecommit moet worden — lokaal en live op
+Vercel praten met dezelfde database, en schrijfacties (zoals de
+schrijffunctie die later toegevoegd wordt) blijven gewoon bewaard tussen
+deploys.
+
 ## Lokaal draaien
 
 ```bash
 npm install
-cp .env.example .env
-npm run db:push     # maakt prisma/data/dev.db aan volgens het schema
-npm run db:seed     # vult de database met de laatste Omni-export
+npx vercel link          # koppelt deze map aan het Vercel-project (eenmalig)
+npx vercel env pull .env # haalt de echte POSTGRES_URL op uit Vercel
+npm run db:push          # zet het schema op de database
+npm run db:seed          # vult de database met de laatste Omni-export
 npm run dev
 ```
 
 Open daarna http://localhost:3000.
 
-Na `db:push`/`db:seed` staat er een echt databasebestand op
-`prisma/data/dev.db`. Dit bestand wordt gewoon meegecommit (het staat niet
-in `.gitignore`), want zonder dat bestand heeft de live site op Vercel
-niets om te lezen:
-
-```bash
-git add prisma/data/dev.db
-git commit -m "Databasebestand bijwerken"
-git push
-```
-
 ## Live hosten (Vercel)
 
-1. Ga naar [vercel.com](https://vercel.com), log in met je GitHub-account.
-2. "Add New Project" → selecteer deze repo (`leadsapi`).
-3. Zet de environment variable `DATABASE_URL` op `file:./data/dev.db`.
-   Let op: dit pad is relatief aan `prisma/schema.prisma`, dus niet
-   `file:./prisma/data/dev.db` (dat zoekt dan verkeerd in `prisma/prisma/data/`).
-   - Voor een snelle start werkt dit committed sqlite-bestand prima, maar
-     let op: op Vercel's serverless functies is de schijf niet persistent
-     tussen deploys — een write vanuit de live site zelf zou verloren gaan.
-     Voor een dashboard waar het team live doorheen kijkt en later ook
-     dingen invult, is een gehoste database (bv. Vercel Postgres, of een
-     gehoste SQLite-variant zoals Turso) de betere keuze zodra die
-     schrijffunctie er is.
-4. Vercel bouwt en deployt automatisch bij elke push naar `main`.
+Dit project is al gekoppeld aan een Vercel-project (`leadsapi`) met een
+Prisma Postgres-database erop aangesloten — de environment variables
+(`POSTGRES_URL` e.a.) staan daar al goed. Vercel bouwt en deployt
+automatisch bij elke push naar `main`.
 
 ## Pagina's
 

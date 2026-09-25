@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("POSTGRES_URL")
 }
 
 // A recruiter at Uphill whose leads/shifts we track.
@@ -40,10 +40,10 @@ model Shift {
 // A candidate lead moving through the recruitment funnel, mirroring the
 // "Leads pipeline" view in Omni.
 //
-// SQLite has no native enum type, so `status` is a plain String here.
-// The allowed values (NIEUW, GEBELD, INGEPLAND, NIET_VERSCHENEN,
-// AANGENOMEN, AFGEWEZEN) are enforced in TypeScript — see the LeadStatus
-// type in src/lib/data.ts.
+// `status` is a plain String (kept this way after migrating from SQLite,
+// which has no native enum type). The allowed values (NIEUW, GEBELD,
+// INGEPLAND, NIET_VERSCHENEN, AANGENOMEN, AFGEWEZEN) are enforced in
+// TypeScript — see the LeadStatus type in src/lib/data.ts.
 model Lead {
   id          String     @id @default(cuid())
   name        String
