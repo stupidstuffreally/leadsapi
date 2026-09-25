@@ -9,7 +9,7 @@
  *
  * Run with: npm run db:seed
  */
-import { PrismaClient, LeadStatus } from "@prisma/client";
+import { PrismaClient } from "@prisma/client";
 import { readdirSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 
@@ -75,7 +75,7 @@ async function main() {
     const payload = {
       name: lead.name,
       phone: lead.phone,
-      status: lead.status as LeadStatus,
+      status: lead.status,
       recruiterId: recruiterId ?? null,
       receivedAt: new Date(lead.receivedAt ?? data.syncedAt),
       scheduledAt: lead.scheduledAt ? new Date(lead.scheduledAt) : null,

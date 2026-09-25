@@ -1,6 +1,5 @@
 import { notFound } from "next/navigation";
-import { getRecruiterDetail } from "@/lib/data";
-import { LEAD_STATUS_LABELS } from "@/lib/data";
+import { getRecruiterDetail, statusLabel } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -107,7 +106,7 @@ export default async function RecruiterDetailPage({
                   <td>{l.name}</td>
                   <td>
                     <span className="badge badge-neutral">
-                      {LEAD_STATUS_LABELS[l.status]}
+                      {statusLabel(l.status)}
                     </span>
                   </td>
                   <td>{l.receivedAt.toLocaleDateString("nl-NL")}</td>

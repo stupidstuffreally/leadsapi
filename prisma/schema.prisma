@@ -37,22 +37,18 @@ model Shift {
   @@index([recruiterId, date])
 }
 
-enum LeadStatus {
-  NIEUW
-  GEBELD
-  INGEPLAND
-  NIET_VERSCHENEN
-  AANGENOMEN
-  AFGEWEZEN
-}
-
 // A candidate lead moving through the recruitment funnel, mirroring the
 // "Leads pipeline" view in Omni.
+//
+// SQLite has no native enum type, so `status` is a plain String here.
+// The allowed values (NIEUW, GEBELD, INGEPLAND, NIET_VERSCHENEN,
+// AANGENOMEN, AFGEWEZEN) are enforced in TypeScript — see the LeadStatus
+// type in src/lib/data.ts.
 model Lead {
   id          String     @id @default(cuid())
   name        String
   phone       String?
-  status      LeadStatus @default(NIEUW)
+  status      String     @default("NIEUW")
   recruiter   Recruiter? @relation(fields: [recruiterId], references: [id])
   recruiterId String?
   receivedAt  DateTime

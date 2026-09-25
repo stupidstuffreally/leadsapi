@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { getFunnelCounts, LEAD_STATUS_LABELS } from "@/lib/data";
+import { getFunnelCounts, LEAD_STATUS_LABELS, statusLabel } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -54,7 +54,7 @@ export default async function FunnelPage() {
                 <td>{lead.name}</td>
                 <td>
                   <span className="badge badge-neutral">
-                    {LEAD_STATUS_LABELS[lead.status]}
+                    {statusLabel(lead.status)}
                   </span>
                 </td>
                 <td>{lead.recruiter?.name ?? "Niet doorgestuurd"}</td>

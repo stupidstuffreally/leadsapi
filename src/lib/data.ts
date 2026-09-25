@@ -1,5 +1,15 @@
 import { prisma } from "@/lib/prisma";
-import { LeadStatus } from "@prisma/client";
+
+// SQLite has no native enum type, so Lead.status is a plain String column
+// (see prisma/schema.prisma). This is the source of truth for which values
+// are valid.
+export type LeadStatus =
+  | "NIEUW"
+  | "GEBELD"
+  | "INGEPLAND"
+  | "NIET_VERSCHENEN"
+  | "AANGENOMEN"
+  | "AFGEWEZEN";
 
 export const LEAD_STATUS_LABELS: Record<LeadStatus, string> = {
   NIEUW: "Nieuw",
@@ -9,6 +19,13 @@ export const LEAD_STATUS_LABELS: Record<LeadStatus, string> = {
   AANGENOMEN: "Aangenomen",
   AFGEWEZEN: "Afgewezen",
 };
+
+// Looks up a lead's status label from a plain string (as it comes back
+// from the database), falling back to the raw value for anything
+// unexpected instead of erroring.
+export function statusLabel(status: string): string {
+  return LEAD_STATUS_LABELS[status as LeadStatus] ?? status;
+}
 
 // The full recruitment funnel: how many leads sit in each status right now.
 export async function getFunnelCounts() {
@@ -22,7 +39,7 @@ export async function getFunnelCounts() {
   ) as Record<LeadStatus, number>;
 
   for (const row of counts) {
-    byStatus[row.status] = row._count._all;
+    byStatus[row.status as LeadStatus] = row._count._all;
   }
 
   return byStatus;
