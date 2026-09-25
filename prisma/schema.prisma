@@ -1,0 +1,88 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// A recruiter at Uphill whose leads/shifts we track.
+model Recruiter {
+  id        String   @id @default(cuid())
+  name      String
+  omniId    String?  @unique // recruiter id/uuid as used in Omni, if known
+  vestiging String?
+  active    Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  shifts      Shift[]
+  leads       Lead[]
+  evaluations Evaluation[]
+}
+
+// One worked shift for a recruiter, with a score and free-text feedback
+// ("terugkoppeling"). The rolling 5-shift average is computed from the
+// most recent 5 Shift rows per recruiter.
+model Shift {
+  id          String    @id @default(cuid())
+  recruiter   Recruiter @relation(fields: [recruiterId], references: [id])
+  recruiterId String
+  date        DateTime
+  score       Float?
+  feedback    String?
+  createdAt   DateTime  @default(now())
+
+  @@index([recruiterId, date])
+}
+
+enum LeadStatus {
+  NIEUW
+  GEBELD
+  INGEPLAND
+  NIET_VERSCHENEN
+  AANGENOMEN
+  AFGEWEZEN
+}
+
+// A candidate lead moving through the recruitment funnel, mirroring the
+// "Leads pipeline" view in Omni.
+model Lead {
+  id          String     @id @default(cuid())
+  name        String
+  phone       String?
+  status      LeadStatus @default(NIEUW)
+  recruiter   Recruiter? @relation(fields: [recruiterId], references: [id])
+  recruiterId String?
+  receivedAt  DateTime
+  scheduledAt DateTime?
+  note        String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  @@index([recruiterId, status])
+}
+
+// A coaching/evaluation point for a recruiter, shown on their individual
+// screen to track what training they need.
+model Evaluation {
+  id          String    @id @default(cuid())
+  recruiter   Recruiter @relation(fields: [recruiterId], references: [id])
+  recruiterId String
+  date        DateTime
+  point       String
+  category    String?
+  createdAt   DateTime  @default(now())
+
+  @@index([recruiterId, date])
+}
+
+// One row per manual sync from Omni, so the dashboard can show "laatst
+// bijgewerkt op ...". Sync only happens when explicitly requested, never
+// on a schedule.
+model SyncLog {
+  id       String   @id @default(cuid())
+  syncedAt DateTime @default(now())
+  note     String?
+}
