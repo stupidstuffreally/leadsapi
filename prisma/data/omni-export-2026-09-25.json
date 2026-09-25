@@ -1,0 +1,763 @@
+{
+  "syncedAt": "2026-09-25T15:00:00Z",
+  "source": "omni.ventaesdirect.nl",
+  "recruiters": [
+    {
+      "id": "87b6d5b7-9882-420b-b3ad-8ff128ca64bf",
+      "name": "Amy Ferwerda",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "5a279398-aa59-4293-b78b-0cff9a345ba9",
+      "name": "Matyas Tinkoczy",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "d45aeea4-1628-4294-b98b-97d878edaa31",
+      "name": "Afrida Zijlstra",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "21fd4358-5a8c-4a4c-9923-68a17a53a54c",
+      "name": "Niek de Goede",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "2df6534a-1cb4-4d3b-931b-f0907acbe458",
+      "name": "Thieye van Amstel",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "54f6128d-342a-4694-8229-5c8ff5d2ca3e",
+      "name": "Desteny Pieternella",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "02bae558-e8ec-471a-93c2-5b3e58472975",
+      "name": "Justin Jelsma",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "96b2914f-afb5-489f-b86e-22e351f518fc",
+      "name": "Abdullah Aljalmawi",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "cd25dfe4-d996-4d92-aed9-46cdb27e60a8",
+      "name": "Monika Faber",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "68ff4b98-b136-41de-8caa-841562c90097",
+      "name": "Milan Looijenga",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "796a9682-44a8-4227-b7e0-361f5279156a",
+      "name": "Attila Tinkoczy",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "366f1ad5-1855-435f-bdd8-4e3c44a6f97c",
+      "name": "Fartun Aamin",
+      "vestiging": "Leeuwarden Oost"
+    },
+    {
+      "id": "8c2ae882-a5fd-42ad-a92d-294e55634ab1",
+      "name": "Cenep Dahir",
+      "vestiging": "Leeuwarden Oost"
+    }
+  ],
+  "leads": [
+    {
+      "omniId": "1fecc350-4de1-4939-bf10-f1488c841e8a",
+      "name": "Liandra zimmerman",
+      "phone": "0645623320",
+      "status": "INGEPLAND",
+      "recruiterName": "Cenep Dahir",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": "2026-09-24T13:00:00",
+      "note": "wordt verplaatst"
+    },
+    {
+      "omniId": "a5825755-9649-40b1-9a47-bb6a33756bfe",
+      "name": "Sarina X",
+      "phone": "+310610284755",
+      "status": "GEBELD",
+      "recruiterName": "Monika Faber",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": "whatsapp bellen"
+    },
+    {
+      "omniId": "cbbe2067-2ae8-4457-8de7-4d43fdfa654d",
+      "name": "Mo .",
+      "phone": "0616121630",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": "Reden: Geen interesse meer"
+    },
+    {
+      "omniId": "15cb4384-9cf4-4d5e-84e4-c73a725a2058",
+      "name": "Silke .",
+      "phone": "0683040423",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "accf72e0-d14a-4a1e-8dac-834ed09c0b74",
+      "name": "Ricardo .",
+      "phone": "0686054356",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": "Reden: Geen interesse meer"
+    },
+    {
+      "omniId": "c33fd7d6-3b2b-462f-b0cd-c601d35a14e6",
+      "name": "Adam .",
+      "phone": "0639473995",
+      "status": "INGEPLAND",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": "2026-09-24T16:30:00",
+      "note": null
+    },
+    {
+      "omniId": "3157866c-538c-4cbf-a62d-5d5679db70ad",
+      "name": "Jente .",
+      "phone": "0620050846",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "bf266c7e-dcc2-411a-81ae-59e24504a5e6",
+      "name": "Annelies .",
+      "phone": "0612603895",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "f91dfb07-814c-4b9c-a128-e4d3a961b906",
+      "name": "Arsen -",
+      "phone": "0683863535",
+      "status": "INGEPLAND",
+      "recruiterName": null,
+      "receivedAt": "2026-09-22",
+      "scheduledAt": "2026-09-29T16:00:00",
+      "note": null
+    },
+    {
+      "omniId": "8b56a77d-57ef-447f-a8b9-3caffe018ad9",
+      "name": "Ylva achternaam niet gevraagd",
+      "phone": "0616579980",
+      "status": "NIEUW",
+      "recruiterName": "Fartun Aamin",
+      "receivedAt": "2026-09-22",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "c8cf321b-1b37-43e2-8b94-645545fcff92",
+      "name": "Amy ..",
+      "phone": "0628393178",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-17",
+      "scheduledAt": null,
+      "note": "1x gebeld"
+    },
+    {
+      "omniId": "d648e5d2-b12c-46ab-84f2-dc30b4b42899",
+      "name": "Ismael .",
+      "phone": "0612840454",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-17",
+      "scheduledAt": null,
+      "note": "Vrijdag bellen"
+    },
+    {
+      "omniId": "53841c17-8b31-4e56-b14a-1e6fae2f3f4d",
+      "name": "Ruben .",
+      "phone": "0657160751",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-17",
+      "scheduledAt": null,
+      "note": "Reden: Onjuist telefoonnummer"
+    },
+    {
+      "omniId": "8df69a2f-eb5e-4b69-8eaf-4415783f2ace",
+      "name": "Bente .",
+      "phone": "0647092934",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-17",
+      "scheduledAt": null,
+      "note": "Vrijdag bellen"
+    },
+    {
+      "omniId": "f056055f-4c53-4fcd-9688-b68c3f249e77",
+      "name": "Fatima .",
+      "phone": "0638446521",
+      "status": "INGEPLAND",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-22T17:30:00",
+      "note": "Laat nog weten of het lukt ivm ov"
+    },
+    {
+      "omniId": "4c23a79c-5d13-4d6b-9bef-a2978a2e1c0c",
+      "name": "Alexander .",
+      "phone": "0657871484",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-22T15:00:00",
+      "note": null
+    },
+    {
+      "omniId": "54fe28e1-ee57-4fe3-82ce-e63b3118b95d",
+      "name": "Celena .",
+      "phone": "0641619578",
+      "status": "INGEPLAND",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-24T11:00:00",
+      "note": null
+    },
+    {
+      "omniId": "0ac14d67-8e5b-4a3b-ae58-21fa00199bf0",
+      "name": "Jildou .",
+      "phone": "0623617031",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": null,
+      "note": "2x gebeld"
+    },
+    {
+      "omniId": "e9d7b2e1-7b80-454d-8cd1-ac66ab6d5853",
+      "name": "Moumen .",
+      "phone": "0618790436",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-22T14:30:00",
+      "note": null
+    },
+    {
+      "omniId": "21f4c8b6-1ee2-4340-8c82-703fea8df49e",
+      "name": "Mark Teeuw",
+      "phone": "0659354245",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-22T16:00:00",
+      "note": "Samen met Hidde"
+    },
+    {
+      "omniId": "a7688148-d2ca-495d-b669-078b0958ed4d",
+      "name": "Hidde den Tek",
+      "phone": "0611269445",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-09-16",
+      "scheduledAt": "2026-09-22T16:00:00",
+      "note": "Moet worden omgepland, 2 x gebeld en nog niet opgenomen voor het omplannen"
+    },
+    {
+      "omniId": "c0781420-c524-41be-b315-f23778e03df9",
+      "name": "Tygo Huttinga",
+      "phone": "0645614719",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Niek de Goede",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "e754b9c4-fb35-4641-b20c-211aef96f951",
+      "name": "Michelle .",
+      "phone": "+1064757448",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Thieye van Amstel",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": "verkeerd nummer"
+    },
+    {
+      "omniId": "0b45b92c-d9c9-4823-8633-405557aba9f5",
+      "name": "Jur .",
+      "phone": "+31682139865",
+      "status": "GEBELD",
+      "recruiterName": "Thieye van Amstel",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": "2x gebeld"
+    },
+    {
+      "omniId": "ab91347a-2b17-4b05-9bea-024e937d03ac",
+      "name": "Sytske De Groot",
+      "phone": "0682477992",
+      "status": "GEBELD",
+      "recruiterName": "Attila Tinkoczy",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": "appt Matyas terug om afspraak in te plannen"
+    },
+    {
+      "omniId": "9c233b00-cc1a-4b15-87d8-b665e6d68b64",
+      "name": "Samuel .",
+      "phone": "0624565667",
+      "status": "GEBELD",
+      "recruiterName": "Attila Tinkoczy",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": "1x gebeld"
+    },
+    {
+      "omniId": "02604313-e2f8-4a4c-a4b0-f9937043e771",
+      "name": "Janno .",
+      "phone": "0617654699",
+      "status": "GEBELD",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": "1x gebeld"
+    },
+    {
+      "omniId": "78132e94-55e8-4fe3-8786-348fabef9551",
+      "name": "Coen .",
+      "phone": "0686856682",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-09-15",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "21fbe248-31c9-4eb6-b6f8-4c780770825f",
+      "name": "Faie Lever",
+      "phone": "0612762518",
+      "status": "INGEPLAND",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-10",
+      "scheduledAt": "2026-09-23T12:00:00",
+      "note": null
+    },
+    {
+      "omniId": "384b63d6-da2c-45c7-a4b4-9395e92bbbdd",
+      "name": "Merlin van der Meulen",
+      "phone": "+31682328458",
+      "status": "GEBELD",
+      "recruiterName": "Monika Faber",
+      "receivedAt": "2026-09-09",
+      "scheduledAt": null,
+      "note": "1x gebeld"
+    },
+    {
+      "omniId": "7c266e27-0554-412f-bb27-22ec7dab6a94",
+      "name": "Hugo .",
+      "phone": "0627201640",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-09",
+      "scheduledAt": null,
+      "note": "2x gebeld"
+    },
+    {
+      "omniId": "21a47ae8-fd2c-45d0-b23e-b946d0b97400",
+      "name": "Luna .",
+      "phone": "+31657606735",
+      "status": "GEBELD",
+      "recruiterName": "Monika Faber",
+      "receivedAt": "2026-09-09",
+      "scheduledAt": null,
+      "note": "maandag 14 sept. weer bellen (denkt erover na)"
+    },
+    {
+      "omniId": "2d8a0bba-06b3-4866-95b8-d51151728068",
+      "name": "Teun ,",
+      "phone": "0629338295",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Milan Looijenga",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "5x gebeld"
+    },
+    {
+      "omniId": "709a3e4f-56e2-4099-acfd-2ce3c4e6b83d",
+      "name": "Emma .",
+      "phone": "0621996999",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "5x gebeld"
+    },
+    {
+      "omniId": "9abfa39f-1a16-4347-829e-c5cb51a82269",
+      "name": "Reem .",
+      "phone": "+31643802005",
+      "status": "GEBELD",
+      "recruiterName": "Monika Faber",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "4x gebeld"
+    },
+    {
+      "omniId": "781a794a-1048-48cc-a2f6-b5074d1fc2b2",
+      "name": "Tirza .",
+      "phone": "+31624708014",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Monika Faber",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "1x gebeld"
+    },
+    {
+      "omniId": "b92467d7-347a-40a9-82a3-5a59bd23a3d1",
+      "name": "Ruben .",
+      "phone": "0616322425",
+      "status": "GEBELD",
+      "recruiterName": "Attila Tinkoczy",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "3x gebeld"
+    },
+    {
+      "omniId": "bdd36c4a-c764-4d3d-a9ed-a91db7729f8b",
+      "name": "Jurre .",
+      "phone": "0683596447",
+      "status": "GEBELD",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-09-08",
+      "scheduledAt": null,
+      "note": "3x gebeld"
+    },
+    {
+      "omniId": "e82a8573-bfa2-4cae-bc66-f3af712e5faf",
+      "name": "Fedde .",
+      "phone": "0644028093",
+      "status": "GEBELD",
+      "recruiterName": "Milan Looijenga",
+      "receivedAt": "2026-09-03",
+      "scheduledAt": null,
+      "note": "3x gebeld"
+    },
+    {
+      "omniId": "b8c20a66-9f6f-4f70-bd3a-4b83600d91d2",
+      "name": "Flor .",
+      "phone": "0642198839",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-09-03",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "c92e6dd8-2612-450a-98da-c82c1bfd3a80",
+      "name": "Suzan Hussein",
+      "phone": "0686264914",
+      "status": "GEBELD",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-09-01",
+      "scheduledAt": null,
+      "note": "4x gebeld"
+    },
+    {
+      "omniId": "8238985e-e1d4-4741-966a-32fcf505f9b0",
+      "name": "Marijne Kampstra",
+      "phone": "0649555855",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-09-01",
+      "scheduledAt": null,
+      "note": "5x gebeld"
+    },
+    {
+      "omniId": "3a9129cc-f1d1-4335-b2b1-ae6e37727c7b",
+      "name": "Camilla Van der Wal",
+      "phone": "0626600597",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-09-01",
+      "scheduledAt": "2026-09-04T17:00:00",
+      "note": "neemt vriendin mee"
+    },
+    {
+      "omniId": "8193a4d2-5a02-4605-9b03-86bb5228fbff",
+      "name": "Jesse Veenstra",
+      "phone": "0627271039",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Niek de Goede",
+      "receivedAt": "2026-09-01",
+      "scheduledAt": "2026-09-04T14:00:00",
+      "note": null
+    },
+    {
+      "omniId": "2d86b86e-aac9-4b22-a247-a043e693414e",
+      "name": "Emlilia Handel",
+      "phone": "0653953947",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Desteny Pieternella",
+      "receivedAt": "2026-08-30",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "2963d8ce-a0ed-4aef-ba75-aac538db3683",
+      "name": "Emily .",
+      "phone": "0644821945",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-08-28",
+      "scheduledAt": "2026-09-08T16:00:00",
+      "note": "Achternaam Odink"
+    },
+    {
+      "omniId": "f8130b38-8f7e-40ee-954a-c27f05fa8607",
+      "name": "Chanella .",
+      "phone": "0641531176",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-08-28",
+      "scheduledAt": "2026-09-01T16:30:00",
+      "note": null
+    },
+    {
+      "omniId": "c533a30f-a28c-4b1d-8024-f89a890d4fd1",
+      "name": "Quinten Meter",
+      "phone": "0638488800",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Fartun Aamin",
+      "receivedAt": "2026-08-27",
+      "scheduledAt": "2026-09-08T16:30:00",
+      "note": null
+    },
+    {
+      "omniId": "e96d184e-3870-4d8e-af26-e4e992a2ab45",
+      "name": "Nigel nietgevraagd",
+      "phone": "31616943951",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": null,
+      "note": "Follow up gesprek volgende week dinsdag"
+    },
+    {
+      "omniId": "6f435ca2-a6ee-4307-9e86-6fe82d3e47fc",
+      "name": "Elske nietgevraagd",
+      "phone": "31627165972",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": null,
+      "note": "1x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "aedc0d39-0750-49eb-857d-619ef886c6b0",
+      "name": "Freya nietgevraagd",
+      "phone": "31615363333",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Afrida Zijlstra",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": null,
+      "note": "2x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "9fad6494-908e-4646-ad22-00d74e3ded43",
+      "name": "Merel .",
+      "phone": "0641669963",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": "2026-09-01T16:45:00",
+      "note": "komt met vriendinnen."
+    },
+    {
+      "omniId": "5951371c-4166-4e96-a9fc-31384a7e2ad3",
+      "name": "Joop .",
+      "phone": "0683391809",
+      "status": "GEBELD",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": null,
+      "note": "1x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "28df23fd-97c3-4484-a8de-ae6d49e6b0fe",
+      "name": "Maurits .",
+      "phone": "0657432651",
+      "status": "GEBELD",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": null,
+      "note": "1x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "bbe8bc3c-4651-4449-bb39-eee57bef6d1a",
+      "name": "Damir Mustafic",
+      "phone": "+31641835370",
+      "status": "NIET_VERSCHENEN",
+      "recruiterName": "Niek de Goede",
+      "receivedAt": "2026-08-25",
+      "scheduledAt": "2026-09-02T11:00:00",
+      "note": null
+    },
+    {
+      "omniId": "8c6a9ff9-676a-40de-a8ef-421641dbba7b",
+      "name": "Mart Baars",
+      "phone": "0645707553",
+      "status": "GEBELD",
+      "recruiterName": "Milan Looijenga",
+      "receivedAt": "2026-08-18",
+      "scheduledAt": null,
+      "note": "2x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "c2d7cc13-84bd-4525-bb2e-f160bafd6c33",
+      "name": "Naomi .",
+      "phone": "0623375628",
+      "status": "GEBELD",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-08-18",
+      "scheduledAt": null,
+      "note": "2x gebeld, niet opgenomen."
+    },
+    {
+      "omniId": "306e6f6f-e000-4c93-95b1-90c68655a05b",
+      "name": "Jasmina .",
+      "phone": "0639634375",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-08-18",
+      "scheduledAt": null,
+      "note": "Reden: Geen interesse meer"
+    },
+    {
+      "omniId": "f27343a3-16bf-4f7e-9b2b-0713c18e19a7",
+      "name": "Abdul .",
+      "phone": "+31687775978",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Amy Ferwerda",
+      "receivedAt": "2026-08-18",
+      "scheduledAt": null,
+      "note": "Reden: Geen interesse meer"
+    },
+    {
+      "omniId": "4dc8ed6b-e037-4f01-b88f-fb926aead9d5",
+      "name": "Mike Berkenpas",
+      "phone": "+31651976147",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Niek de Goede",
+      "receivedAt": "2026-08-05",
+      "scheduledAt": null,
+      "note": "Reden: Geen interesse meer"
+    },
+    {
+      "omniId": "2cd0dbff-dacb-497c-827f-8efbd5029f09",
+      "name": "Timea Mohos",
+      "phone": "+36302466766",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-08-04",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "e04bd965-82a7-450e-bc51-64c39e02dd13",
+      "name": "Genevieve Torimiro",
+      "phone": "+31684304218",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-08-04",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "dae5a75a-13b0-4435-a33f-c09b8ae921f9",
+      "name": "Jiří Obšivač",
+      "phone": "+420775486726",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-08-04",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "a8fa6953-e8f1-495b-9c83-6eec36fc2963",
+      "name": "Alp Yılmaz",
+      "phone": "+31617459235",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-08-04",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "98da53ad-b5ce-4347-920c-61335fc1dffc",
+      "name": "Gabriel Popescu",
+      "phone": "+40774460215",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-08-04",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "d4f8a3cc-5b5e-44e5-bf7c-847e63be6da5",
+      "name": "Abdihamid Derow",
+      "phone": "+31615835694",
+      "status": "NIEUW",
+      "recruiterName": null,
+      "receivedAt": "2026-07-16",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "eb097c32-6b0d-4920-ab94-6a27840662c0",
+      "name": "Lorenzo .",
+      "phone": "+31657061941",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Matyas Tinkoczy",
+      "receivedAt": "2026-07-09",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "f282a9e5-4ff4-49a8-b8d2-403763f7a7f0",
+      "name": "Pola Wozniak",
+      "phone": "+48735999509",
+      "status": "AFGEWEZEN",
+      "recruiterName": null,
+      "receivedAt": "2026-07-08",
+      "scheduledAt": null,
+      "note": null
+    },
+    {
+      "omniId": "fd51a741-e9ef-4517-8891-6a86d5b22f95",
+      "name": "Daniel .",
+      "phone": "+31630860185",
+      "status": "AFGEWEZEN",
+      "recruiterName": "Thieye van Amstel",
+      "receivedAt": "2026-06-17",
+      "scheduledAt": null,
+      "note": null
+    }
+  ]
+}
