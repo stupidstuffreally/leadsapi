@@ -14,6 +14,7 @@ export type LeadStatus =
   | "NIEUW"
   | "GEBELD"
   | "INGEPLAND"
+  | "GEINTERVIEWD"
   | "NIET_VERSCHENEN"
   | "AANGENOMEN"
   | "AFGEWEZEN";
@@ -21,16 +22,35 @@ export type LeadStatus =
 export const LEAD_STATUS_LABELS: Record<LeadStatus, string> = {
   NIEUW: "Nieuw",
   GEBELD: "Gebeld",
-  INGEPLAND: "Ingepland",
+  INGEPLAND: "Gepland",
+  GEINTERVIEWD: "Geïnterviewd",
   NIET_VERSCHENEN: "Niet verschenen",
   AANGENOMEN: "Aangenomen",
   AFGEWEZEN: "Afgewezen",
 };
 
+// The 5 columns shown on the Funnel-kanbanbord, in this exact order — matches
+// the Design-canvas (Funnel.dc.html) 1-op-1. "Nieuw" (nog niet gebeld) en
+// "Niet verschenen" (no-show) bestaan als status, maar hebben geen eigen kolom
+// op dit bord.
+export const FUNNEL_BOARD_STATUSES: LeadStatus[] = [
+  "GEBELD",
+  "INGEPLAND",
+  "GEINTERVIEWD",
+  "AANGENOMEN",
+  "AFGEWEZEN",
+];
+
+// Mapping-regel voor de handmatige Omni-sync: een lead in Omni staat op
+// "Geïnterviewd" zodra Omni voor die lead "uitkomst nodig" aangeeft (het
+// gesprek heeft plaatsgevonden, maar er is nog geen aangenomen/afgewezen
+// beslissing vastgelegd).
+
 const OPEN_FUNNEL_STATUSES: LeadStatus[] = [
   "NIEUW",
   "GEBELD",
   "INGEPLAND",
+  "GEINTERVIEWD",
   "NIET_VERSCHENEN",
 ];
 

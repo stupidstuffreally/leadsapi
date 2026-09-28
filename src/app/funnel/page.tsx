@@ -1,5 +1,5 @@
 import { prisma } from "@/lib/prisma";
-import { LEAD_STATUS_LABELS, LeadStatus } from "@/lib/data";
+import { LEAD_STATUS_LABELS, FUNNEL_BOARD_STATUSES, LeadStatus } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
@@ -7,6 +7,7 @@ const COLUMN_BADGE: Record<LeadStatus, string> = {
   NIEUW: "badge badge-neutral",
   GEBELD: "badge badge-neutral",
   INGEPLAND: "badge badge-neutral",
+  GEINTERVIEWD: "badge badge-neutral",
   NIET_VERSCHENEN: "badge badge-warning",
   AANGENOMEN: "badge badge-success",
   AFGEWEZEN: "badge badge-danger",
@@ -19,7 +20,7 @@ export default async function FunnelPage() {
     include: { recruiter: true },
   });
 
-  const columns = Object.keys(LEAD_STATUS_LABELS) as LeadStatus[];
+  const columns = FUNNEL_BOARD_STATUSES;
   const byStatus = Object.fromEntries(
     columns.map((status) => [status, leads.filter((l) => l.status === status)])
   ) as Record<LeadStatus, typeof leads>;
@@ -29,15 +30,15 @@ export default async function FunnelPage() {
       <div>
         <h1>Leads funnel</h1>
         <div className="page-subtitle">
-          Volledige follow-up funnel: gebeld, gepland, geïnterviewd/niet
-          verschenen, aangenomen, afgewezen (met verplichte reden).
+          Gebeld → Gepland → Geïnterviewd → Aangenomen of Afgewezen (met
+          verplichte reden).
         </div>
       </div>
 
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(6, minmax(200px, 1fr))",
+          gridTemplateColumns: "repeat(5, minmax(200px, 1fr))",
           gap: 16,
           alignItems: "start",
           overflowX: "auto",

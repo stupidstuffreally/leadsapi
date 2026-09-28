@@ -62,7 +62,11 @@ Gebouwd:
 - **Shift** — één shift per recruiter, met score en vrije terugkoppeling. Het
   rollend 5-shift gemiddelde wordt berekend over de 5 meest recente shifts.
 - **Lead** — een sollicitant, met status door de volledige funnel (nieuw → gebeld →
-  ingepland → niet verschenen / aangenomen / afgewezen).
+  gepland → geïnterviewd → niet verschenen / aangenomen / afgewezen). Het
+  Funnel-kanbanbord zelf toont 5 kolommen (gebeld, gepland, geïnterviewd,
+  aangenomen, afgewezen), exact zoals in het Design-canvas — "nieuw" en "niet
+  verschenen" zijn wel geldige statussen maar hebben geen eigen kolom. Een
+  lead staat op "geïnterviewd" zodra Omni "uitkomst nodig" aangeeft.
 - **Evaluation** — coaching-/evaluatiepunten per recruiter, zichtbaar op het
   individuele recruiter-scherm.
 - **SyncLog** — timestamp van de laatste handmatige sync.
