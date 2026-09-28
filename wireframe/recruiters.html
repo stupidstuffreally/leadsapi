@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Recruiters — Leads API</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="recruiters">
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-text">Leads API</div>
+        <div class="brand-sub">Uphill Marketing</div>
+      </div>
+    </div>
+
+    <nav class="primary-nav">
+      <a class="nav-link" data-nav="dashboard" href="index.html">
+        <span class="icon">🏠</span> Dashboard
+      </a>
+      <a class="nav-link" data-nav="recruiters" href="recruiters.html">
+        <span class="icon">👥</span> Recruiters
+      </a>
+      <a class="nav-link" data-nav="funnel" href="funnel.html">
+        <span class="icon">🧭</span> Leads funnel
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="theme-toggle" data-theme-toggle>
+        <span>Thema</span>
+        <span>☀️ / 🌙</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1 class="page-title">Recruiters</h1>
+        <div class="page-sub">Rollend gemiddelde over de laatste vijf shifts, hoogste eerst.</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-primary" data-open-eval>+ Evaluatie toevoegen</button>
+      </div>
+    </div>
+
+    <div class="card glass">
+      <div id="recruiter-list"></div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

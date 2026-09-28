@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Dashboard — Leads API</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="dashboard">
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-text">Leads API</div>
+        <div class="brand-sub">Uphill Marketing</div>
+      </div>
+    </div>
+
+    <nav class="primary-nav">
+      <a class="nav-link" data-nav="dashboard" href="index.html">
+        <span class="icon">🏠</span> Dashboard
+      </a>
+      <a class="nav-link" data-nav="recruiters" href="recruiters.html">
+        <span class="icon">👥</span> Recruiters
+      </a>
+      <a class="nav-link" data-nav="funnel" href="funnel.html">
+        <span class="icon">🧭</span> Leads funnel
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="theme-toggle" data-theme-toggle>
+        <span>Thema</span>
+        <span>☀️ / 🌙</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div>
+        <h1 class="page-title">Dashboard</h1>
+        <div class="page-sub">Recente shifts, per shift een score en terugkoppeling.</div>
+      </div>
+      <div class="topbar-actions">
+        <button class="btn btn-primary" data-open-eval>+ Evaluatie toevoegen</button>
+      </div>
+    </div>
+
+    <div class="grid grid-stats" style="margin-bottom:22px;">
+      <div class="card glass stat-tile">
+        <div class="stat-value" id="stat-avg">–</div>
+        <div class="stat-label">Gemiddelde score (alle shifts)</div>
+      </div>
+      <div class="card glass stat-tile">
+        <div class="stat-value" id="stat-shifts">–</div>
+        <div class="stat-label">Shifts deze week</div>
+      </div>
+      <div class="card glass stat-tile">
+        <div class="stat-value" id="stat-leads">–</div>
+        <div class="stat-label">Leads in de funnel</div>
+      </div>
+      <div class="card glass stat-tile">
+        <div class="stat-value" id="stat-hired">–</div>
+        <div class="stat-label">Aangenomen</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <div class="section-title">Recente shifts</div>
+        <div id="shift-list"></div>
+      </div>
+      <div>
+        <div class="section-title">Snel naar</div>
+        <div class="card glass">
+          <a class="row" href="recruiters.html">
+            <span class="icon">👥</span>
+            <div class="row-main">
+              <div class="row-title">Recruiters</div>
+              <div class="row-meta">Vijf-shift gemiddelde per recruiter</div>
+            </div>
+          </a>
+          <a class="row" href="funnel.html">
+            <span class="icon">🧭</span>
+            <div class="row-main">
+              <div class="row-title">Leads funnel</div>
+              <div class="row-meta">Van bellen tot aangenomen of afgewezen</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<button class="fab" data-open-eval title="Nieuwe evaluatie">+</button>
+
+<script src="app.js"></script>
+</body>
+</html>

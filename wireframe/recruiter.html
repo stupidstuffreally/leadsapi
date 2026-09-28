@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Recruiter — Leads API</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="recruiters">
+<div class="app-shell">
+
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark"></div>
+      <div>
+        <div class="brand-text">Leads API</div>
+        <div class="brand-sub">Uphill Marketing</div>
+      </div>
+    </div>
+
+    <nav class="primary-nav">
+      <a class="nav-link" data-nav="dashboard" href="index.html">
+        <span class="icon">🏠</span> Dashboard
+      </a>
+      <a class="nav-link" data-nav="recruiters" href="recruiters.html">
+        <span class="icon">👥</span> Recruiters
+      </a>
+      <a class="nav-link" data-nav="funnel" href="funnel.html">
+        <span class="icon">🧭</span> Leads funnel
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <div class="theme-toggle" data-theme-toggle>
+        <span>Thema</span>
+        <span>☀️ / 🌙</span>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main" id="recruiter-detail">
+    <a class="link-quiet" href="recruiters.html">← Alle recruiters</a>
+
+    <div class="topbar" style="margin-top:12px;">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <div class="avatar" id="recruiter-avatar" style="width:52px;height:52px;font-size:16px;"></div>
+        <div>
+          <h1 class="page-title" id="recruiter-name" style="font-size:22px;">–</h1>
+          <div class="page-sub">Gemiddelde laatste vijf shifts: <strong id="recruiter-avg">–</strong></div>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <select id="recruiter-switch" class="btn btn-sm" style="appearance:auto;"></select>
+        <button class="btn btn-primary" id="add-eval-btn">+ Evaluatie toevoegen</button>
+      </div>
+    </div>
+
+    <div class="grid grid-2" style="align-items:start;">
+      <div>
+        <div class="section-title">Score per shift</div>
+        <div class="card glass" style="display:flex;justify-content:space-between;" id="shift-scores"></div>
+
+        <div class="section-title" style="margin-top:20px;">Evaluaties</div>
+        <div class="card glass" id="eval-list"></div>
+      </div>
+
+      <div>
+        <div class="section-title">Coaching &amp; training</div>
+        <div class="card glass" id="coach-list"></div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
