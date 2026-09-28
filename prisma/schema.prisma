@@ -17,9 +17,10 @@ model Recruiter {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  shifts      Shift[]
-  leads       Lead[]
-  evaluations Evaluation[]
+  shifts           Shift[]
+  leads            Lead[]
+  evaluations      Evaluation[]
+  coachingSessions CoachingSession[]
 }
 
 // One worked shift for a recruiter, with a score and free-text feedback
@@ -32,6 +33,10 @@ model Shift {
   date        DateTime
   score       Float?
   feedback    String?
+  // Vrij focuspunt, toegevoegd via de "opmerking"-knop op het Dashboard.
+  // Los van `feedback` (dat komt uit de Omni-sync); dit veld wordt getoond
+  // op de Recruiter-detailpagina onder "Focuspunten (vanuit dashboard)".
+  focusPoint  String?
   createdAt   DateTime  @default(now())
 
   @@index([recruiterId, date])
@@ -81,4 +86,66 @@ model SyncLog {
   id       String   @id @default(cuid())
   syncedAt DateTime @default(now())
   note     String?
+}
+
+// A coaching/training session for a recruiter, shown on the "Coaching &
+// training" screen. `status` is a plain String, same convention as
+// Lead.status: "gepland" | "in behandeling" | "afgerond".
+model CoachingSession {
+  id          String    @id @default(cuid())
+  recruiter   Recruiter @relation(fields: [recruiterId], references: [id])
+  recruiterId String
+  title       String
+  meta        String? // vrije tekst, bijv. "Gepland — 3 okt" of "Zelfstudie"
+  status      String    @default("gepland")
+  date        DateTime?
+  createdAt   DateTime  @default(now())
+
+  @@index([recruiterId])
+}
+
+// Team-wide training material checklist on the "Coaching & training"
+// screen. Overview-only — not tied to a specific recruiter's record.
+model TrainingMateriaal {
+  id          String    @id @default(cuid())
+  title       String
+  description String?
+  checked     Boolean   @default(false)
+  checkedAt   DateTime?
+  createdAt   DateTime  @default(now())
+}
+
+// A vestiging-level goal on the "Visie" screen (e.g. "Man in dienst").
+model Doel {
+  id        String   @id @default(cuid())
+  name      String
+  current   Float    @default(0)
+  target    Float    @default(1)
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+// A document on the "Bestanden" screen. `googleDocsUrl`/`linked` describe
+// the Google Docs link once one exists — creating a file here does not
+// call the Google Docs API yet.
+model Bestand {
+  id            String   @id @default(cuid())
+  name          String
+  templateType  String? // eval | rapport | sollicitatie | leeg
+  googleDocsUrl String?
+  linked        Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+}
+
+// One day-level evaluation/consensus note for the "Shifts" screen,
+// keyed by calendar date.
+model DayEvaluation {
+  id        String   @id @default(cuid())
+  date      DateTime @unique
+  vestiging String?
+  text      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

@@ -1,70 +1,101 @@
 import { prisma } from "@/lib/prisma";
-import { getFunnelCounts, LEAD_STATUS_LABELS, statusLabel } from "@/lib/data";
+import { LEAD_STATUS_LABELS, LeadStatus } from "@/lib/data";
 
 export const dynamic = "force-dynamic";
 
+const COLUMN_BADGE: Record<LeadStatus, string> = {
+  NIEUW: "badge badge-neutral",
+  GEBELD: "badge badge-neutral",
+  INGEPLAND: "badge badge-neutral",
+  NIET_VERSCHENEN: "badge badge-warning",
+  AANGENOMEN: "badge badge-success",
+  AFGEWEZEN: "badge badge-danger",
+};
+
 export default async function FunnelPage() {
-  const [counts, leads] = await Promise.all([
-    getFunnelCounts(),
-    prisma.lead.findMany({
-      orderBy: { receivedAt: "desc" },
-      take: 50,
-      include: { recruiter: true },
-    }),
-  ]);
+  const leads = await prisma.lead.findMany({
+    orderBy: { receivedAt: "desc" },
+    take: 200,
+    include: { recruiter: true },
+  });
+
+  const columns = Object.keys(LEAD_STATUS_LABELS) as LeadStatus[];
+  const byStatus = Object.fromEntries(
+    columns.map((status) => [status, leads.filter((l) => l.status === status)])
+  ) as Record<LeadStatus, typeof leads>;
 
   return (
     <>
-      <h2>Leads funnel</h2>
-      <p className="subtitle">
-        Volledige follow-up funnel: gebeld, gepland, geïnterviewd/niet
-        verschenen, aangenomen, afgewezen.
-      </p>
-
-      <div className="stat-row">
-        {Object.entries(LEAD_STATUS_LABELS).map(([status, label]) => (
-          <div className="stat-tile" key={status}>
-            <div className="label">{label}</div>
-            <div className="value">
-              {counts[status as keyof typeof counts]}
-            </div>
-          </div>
-        ))}
+      <div>
+        <h1>Leads funnel</h1>
+        <div className="page-subtitle">
+          Volledige follow-up funnel: gebeld, gepland, geïnterviewd/niet
+          verschenen, aangenomen, afgewezen (met verplichte reden).
+        </div>
       </div>
 
-      {leads.length === 0 ? (
-        <div className="empty-state">
-          Nog geen leads geregistreerd. Vraag Claude om de laatste data uit
-          Omni te halen zodra je klaar bent om te synchroniseren.
-        </div>
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>Naam</th>
-              <th>Status</th>
-              <th>Recruiter</th>
-              <th>Binnengekomen</th>
-              <th>Opmerking</th>
-            </tr>
-          </thead>
-          <tbody>
-            {leads.map((lead) => (
-              <tr key={lead.id}>
-                <td>{lead.name}</td>
-                <td>
-                  <span className="badge badge-neutral">
-                    {statusLabel(lead.status)}
-                  </span>
-                </td>
-                <td>{lead.recruiter?.name ?? "Niet doorgestuurd"}</td>
-                <td>{lead.receivedAt.toLocaleDateString("nl-NL")}</td>
-                <td className="feedback">{lead.note ?? "—"}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      )}
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(6, minmax(200px, 1fr))",
+          gap: 16,
+          alignItems: "start",
+          overflowX: "auto",
+          paddingBottom: 4,
+        }}
+      >
+        {columns.map((status) => {
+          const items = byStatus[status];
+          return (
+            <div key={status} className="glass" style={{ borderRadius: 22, padding: 14 }}>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                  padding: "6px 4px 14px",
+                }}
+              >
+                <div style={{ fontSize: 13, fontWeight: 700 }}>{LEAD_STATUS_LABELS[status]}</div>
+                <span className={COLUMN_BADGE[status]}>{items.length}</span>
+              </div>
+              <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+                {items.length === 0 ? (
+                  <div style={{ fontSize: 12, color: "var(--text-faint)", padding: "0 4px" }}>—</div>
+                ) : (
+                  items.map((lead) => (
+                    <div
+                      key={lead.id}
+                      style={{
+                        background: "rgba(255,255,255,0.82)",
+                        border: "1px solid rgba(255,255,255,0.8)",
+                        borderRadius: 16,
+                        padding: 14,
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: 8,
+                        boxShadow: "0 8px 20px -14px rgba(20,20,45,0.3)",
+                      }}
+                    >
+                      <div style={{ fontSize: 13, fontWeight: 600 }}>{lead.name}</div>
+                      <div style={{ fontSize: 11, color: "var(--text-dim)" }}>
+                        {lead.recruiter?.name ?? "Niet doorgestuurd"} ·{" "}
+                        {lead.receivedAt.toLocaleDateString("nl-NL")}
+                      </div>
+                      {lead.note ? (
+                        <div style={{ fontSize: 11, color: status === "AFGEWEZEN" ? "var(--danger-text)" : "var(--text-dim)" }}>
+                          {status === "AFGEWEZEN" ? "Reden: " : ""}
+                          {lead.note}
+                        </div>
+                      ) : null}
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
+          );
+        })}
+      </div>
     </>
   );
 }
