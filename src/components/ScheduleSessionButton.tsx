@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { addCoachingSession } from "@/lib/actions";
+import GlassSelect from "@/components/GlassSelect";
 
 type RecruiterOption = { id: string; name: string };
 
@@ -41,11 +42,11 @@ export default function ScheduleSessionButton({ recruiters }: { recruiters: Recr
             <div className="modal-title">Coaching-sessie inplannen</div>
             <div>
               <div className="field-label">Recruiter</div>
-              <select className="pill" value={recruiterId} onChange={(e) => setRecruiterId(e.target.value)}>
-                {recruiters.map((r) => (
-                  <option key={r.id} value={r.id}>{r.name}</option>
-                ))}
-              </select>
+              <GlassSelect
+                value={recruiterId}
+                onChange={setRecruiterId}
+                options={recruiters.map((r) => ({ value: r.id, label: r.name }))}
+              />
             </div>
             <div>
               <div className="field-label">Onderwerp</div>

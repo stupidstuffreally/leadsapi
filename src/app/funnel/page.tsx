@@ -38,11 +38,9 @@ export default async function FunnelPage() {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(5, minmax(200px, 1fr))",
+          gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
           gap: 16,
           alignItems: "start",
-          overflowX: "auto",
-          paddingBottom: 4,
         }}
       >
         {columns.map((status) => {

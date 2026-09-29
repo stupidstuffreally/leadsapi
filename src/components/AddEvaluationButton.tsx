@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from "react";
 import { addShiftEvaluation } from "@/lib/actions";
+import GlassSelect from "@/components/GlassSelect";
 
 type RecruiterOption = { id: string; name: string };
 
@@ -65,17 +66,11 @@ export default function AddEvaluationButton({
             {recruiters ? (
               <div>
                 <div className="field-label">Recruiter</div>
-                <select
-                  className="pill"
+                <GlassSelect
                   value={recruiterId}
-                  onChange={(e) => setRecruiterId(e.target.value)}
-                >
-                  {recruiters.map((r) => (
-                    <option key={r.id} value={r.id}>
-                      {r.name}
-                    </option>
-                  ))}
-                </select>
+                  onChange={setRecruiterId}
+                  options={recruiters.map((r) => ({ value: r.id, label: r.name }))}
+                />
               </div>
             ) : null}
 

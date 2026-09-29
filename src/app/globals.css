@@ -534,6 +534,80 @@ select.pill {
   width: 100%;
 }
 
+/* Custom glass dropdown (replaces native <select> so the open pop-up list
+   can share the site's glass look — a native <select> menu is rendered by
+   the OS and can't be restyled). */
+.glass-pill-button {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.glass-pill-button:hover {
+  border-color: var(--border-strong);
+}
+
+.glass-pill-button svg {
+  flex-shrink: 0;
+  color: var(--text-dim);
+  transition: transform 0.15s ease;
+}
+
+.glass-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  z-index: 60;
+  border-radius: 16px;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+
+.glass-dropdown-option {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: inherit;
+  color: var(--text);
+  padding: 10px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.glass-dropdown-option:hover {
+  background: rgba(10, 132, 255, 0.1);
+}
+
+.glass-dropdown-option.active {
+  background: rgba(10, 132, 255, 0.14);
+  color: var(--accent);
+}
+
 .modal-backdrop {
   position: fixed;
   inset: 0;
